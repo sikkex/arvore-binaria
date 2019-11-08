@@ -1,6 +1,6 @@
 #include "arvore.h"
 
-ArvNo* arv_criano(char c, ArvNo* esq, ArvNo* dir)
+ArvNo* arv_criano (char c, ArvNo* esq, ArvNo* dir)
 {
     ArvNo* p = (ArvNo*) malloc(sizeof(ArvNo));
     p->info = c;
@@ -9,14 +9,33 @@ ArvNo* arv_criano(char c, ArvNo* esq, ArvNo* dir)
     return p;
 }
 
-Arv* arv_cria(ArvNo* r)
+Arv* arv_cria (ArvNo* r)
 {
     Arv* a = (Arv*) malloc(sizeof(Arv));
     a->raiz = r;
     return a;
 }
 
+static void imprime (ArvNo* r, int tab)
+{
+    for (int i = 0; i < tab; i++) {
+        printf("-");
+    }
+    if (r != NULL){
+        printf("%c\n", r->info);                   /* mostra informação */
+        imprime(r->esq, tab + 2);            /* imprime sae (sub árvore da esquerda) */
+        printf("\n");
+        imprime(r->dir, tab + 2);            /* imprime sad (sub árvore da direita) */
+    } else printf("vazio");
+
+}
+void arv_imprime (Arv* a)
+{
+    imprime(a->raiz, 0);               /* imprime recursivamente a partir da raiz */
+}
+
 int main() {
+    printf("\n");
 
     Arv* arvore = arv_cria(
             arv_criano('a',
@@ -29,6 +48,8 @@ int main() {
                             )
                             )
             );
+    arv_imprime(arvore);
 
+    printf("\n");
     return 0;
 }

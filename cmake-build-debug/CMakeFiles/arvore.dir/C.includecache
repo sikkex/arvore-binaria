@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/danielmattos/Documents/Desenvolvedor/C/revisão-geral/arvore/arvore.h
+stdlib.h
+-
+stdio.h
+-
+
+/Users/danielmattos/Documents/Desenvolvedor/C/revisão-geral/arvore/main.c
+arvore.h
+/Users/danielmattos/Documents/Desenvolvedor/C/revisão-geral/arvore/arvore.h
+
