@@ -14,3 +14,6 @@ typedef struct arv Arv;
 struct arv {
     ArvNo* raiz;
 };
+
+ArvNo* arv_criano(char c, ArvNo* esq, ArvNo* dir);
+Arv* arv_cria(ArvNo* r);
