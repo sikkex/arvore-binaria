@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/danielmattos/Documents/Desenvolvedor/C/revisão-geral/arvore/arvore.h">
+			<Option target="arvore"/>
+		</Unit>
 		<Unit filename="/Users/danielmattos/Documents/Desenvolvedor/C/revisão-geral/arvore/main.c">
 			<Option target="arvore"/>
 		</Unit>

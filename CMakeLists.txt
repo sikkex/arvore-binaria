@@ -3,4 +3,4 @@ project(arvore C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(arvore main.c)
+add_executable(arvore main.c arvore.h)
