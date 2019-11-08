@@ -1,6 +1,6 @@
 # Arvore Binária
 
-Arvore Binária do livro Introdução a Estruturas de Dados com Técnicas de Programação em C - 2º Edição.
+Arvore Binária com base no livro Introdução a Estruturas de Dados com Técnicas de Programação em C - 2º Edição.
 
 ## Autores
 
