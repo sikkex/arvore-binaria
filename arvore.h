@@ -21,3 +21,4 @@ void arv_imprime (Arv* a);
 void arv_libera (Arv* a);
 int arv_pertence (Arv* a, char c);
 ArvNo* arv_busca (Arv* a, char c);
+int arv_altura (Arv* a);
