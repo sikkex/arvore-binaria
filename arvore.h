@@ -23,3 +23,5 @@ static void libera (ArvNo* r);
 void arv_libera (Arv* a);
 static int pertence (ArvNo* r, char c);
 int arv_pertence (Arv* a, char c);
+static ArvNo* busca (ArvNo* r, char c);
+ArvNo* arv_busca (Arv* a, char c);

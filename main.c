@@ -77,6 +77,25 @@ int arv_pertence (Arv* a, char c)
     return pertence(a->raiz, c);
 }
 
+static ArvNo* busca (ArvNo* r, char c)
+{
+    if (r == NULL)
+        return NULL;                        /* árvore vazia: não encontramos */
+    else if (c == r->info)
+        return r;
+    else{
+        ArvNo* p = busca(r->esq, c);        /* busca na sae */
+        if (p != NULL)
+            return p;                       /* encontrou na sae */
+        else
+            return busca(r->dir, c);        /* busca na sad */
+    }
+}
+ArvNo* arv_busca (Arv* a, char c)
+{
+    return busca(a->raiz, c);
+}
+
 int main() {
     printf("\n");
 
