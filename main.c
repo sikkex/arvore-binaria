@@ -21,7 +21,7 @@ static void imprime (ArvNo* r, int tab)
     for (int i = 0; i < tab; i++) {
         printf("-");
     }
-    if (r != NULL){
+    if (r != NULL) {
         printf("%c\n", r->info);                   /* mostra informação */
         imprime(r->esq, tab + 2);            /* imprime sae (sub árvore da esquerda) */
         printf("\n");
@@ -31,7 +31,21 @@ static void imprime (ArvNo* r, int tab)
 }
 void arv_imprime (Arv* a)
 {
-    imprime(a->raiz, 0);               /* imprime recursivamente a partir da raiz */
+    imprime(a->raiz, 0);                    /* imprime recursivamente a partir da raiz */
+}
+
+static void libera (ArvNo* r)
+{
+    if (r != NULL) {
+        libera(r->esq);                           /* libera a sae */
+        libera(r->dir);                           /* libera a sad */
+        free(r);
+    }
+}
+void arv_libera (Arv* a)
+{
+    libera(a->raiz);                              /* libera hierarquia de nós */
+    free(a);                                      /* libera raiz */
 }
 
 int main() {

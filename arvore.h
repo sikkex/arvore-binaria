@@ -19,3 +19,5 @@ ArvNo* arv_criano (char c, ArvNo* esq, ArvNo* dir);
 Arv* arv_cria (ArvNo* r);
 static void imprime (ArvNo* r, int tab);
 void arv_imprime (Arv* a);
+static void libera (ArvNo* r);
+void arv_libera (Arv* a);
