@@ -48,6 +48,35 @@ void arv_libera (Arv* a)
     free(a);                                      /* libera raiz */
 }
 
+static int pertence (ArvNo* r, char c)
+{
+    if (r == NULL)
+        return 0;                                 /* árvore vazia: não encontrou */
+    else
+        return c==r->info ||
+               pertence(r->esq, c) ||
+               pertence(r->dir, c);
+
+    /*
+        return c==r->info ||
+               pertence(r->esq, c) ||
+               pertence(r->dir, c);
+
+        é equivalente a:
+
+        if (c == r->info)
+            return 1;
+        else if (pertence(r->esq, c))
+            return 1;
+        else
+            return pertence(r->dir, c);
+     */
+}
+int arv_pertence (Arv* a, char c)
+{
+    return pertence(a->raiz, c);
+}
+
 int main() {
     printf("\n");
 
